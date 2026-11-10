@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+# CodeRabbit Review Configuration File
+# https://docs.coderabbit.ai/getting-started/configure-coderabbit
+
+language: "en-US"
+tone_instructions: "Be concise, constructive, and direct. Focus on performance, security, React hooks/state best practices, and clean TypeScript."
+
+reviews:
+  profile: "chill"
+  auto_review:
+    enabled: true
+    ignore_title_keywords:
+      - "WIP"
+      - "draft"
+    drafts: false
+    base_branches:
+      - "main"
+      - "development"
+  path_filters:
+    - "!**/node_modules/**"
+    - "!**/dist/**"
+    - "!**/package-lock.json"
+  collapse_walkthrough: true
+
+chat:
+  auto_reply: true
+
