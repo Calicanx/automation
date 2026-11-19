@@ -1,0 +1,27 @@
+# Advior Automation
+
+> Advior Automation builds custom AI agents, LLM integrations, and workflow automations for growing companies. Work runs inside the tools a team already uses (n8n, Make, Zapier, Slack, WhatsApp, CRMs, inboxes, spreadsheets). Fixed scope from $1,500, live in about 2 working weeks. A small team in Nairobi, Kenya, working worldwide.
+
+Key facts:
+
+- Fixed scope pricing: Automation Sprint from $1,500 (one workflow, up to 3 tool integrations, one AI step, written runbook, 30 days of fixes) or System from $4,500 (up to 5 connected workflows, a custom AI agent, error handling, 90 days of support).
+- Human approval checks stay in the loop before anything irreversible happens.
+- Sprint includes a process audit first; the automation is built on the client's real data and tested before go-live.
+- Contact: hello@advior.top · +254 796 305577 · https://wa.me/254796305577 · Book: https://calendar.notion.com/meet/beesrani/book
+- Sibling site (websites for local businesses): https://website.advior.top/
+
+## Pages
+
+- [Home](https://automation.advior.top/): What we build, pricing, FAQ, and how a sprint works.
+- [Selected projects](https://automation.advior.top/work): Automation case studies — lead routing, document processing, AI support workflows.
+- [Blog](https://automation.advior.top/blog): Plain guides on AI agents and workflow automation.
+- [The First Process You Should Automate](https://automation.advior.top/blog/first-process-to-automate): Why the first automation should be small, frequent, and easy to measure.
+- [AI Agent or Workflow? Pick the Boring One First](https://automation.advior.top/blog/ai-agent-or-workflow): When a workflow beats an agent, and where the AI step belongs.
+- [n8n, Make, or Zapier](https://automation.advior.top/blog/n8n-make-zapier): What we actually choose and why.
+- [Contact](https://automation.advior.top/contact): Book a process audit — WhatsApp, call, or email. Replies within the hour.
+- [Privacy policy](https://automation.advior.top/privacy): How we handle client data, credentials, and AI processing.
+- [Terms of service](https://automation.advior.top/terms): Fixed scope, test before you pay, you own the workflow.
+
+## Optional
+
+- [Sitemap](https://automation.advior.top/sitemap.xml): Canonical list of crawlable URLs.

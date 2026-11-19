@@ -24,7 +24,7 @@ export default function ContactPage() {
   const { formatPrice } = useLocale();
   const sprint = formatPrice('sprint');
   const system = formatPrice('system');
-  usePageMeta('Contact', 'Book a process audit with Advior Automation — WhatsApp, call, or email. Replies within the hour.');
+  usePageMeta();
   const launchDay = launchEstimate();
   const [name, setName] = useState('');
   const [business, setBusiness] = useState('');

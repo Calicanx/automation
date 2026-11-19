@@ -6,10 +6,7 @@ import { posts, readMinutes } from '../data/posts';
 import usePageMeta from '../components/usePageMeta';
 
 export default function BlogPage() {
-  usePageMeta(
-    'Blog',
-    'Plain guides on AI agents, integrations, and the processes worth automating first.',
-  );
+  usePageMeta();
   return (
     <main>
       <div className="subnav" data-section="blog-nav">

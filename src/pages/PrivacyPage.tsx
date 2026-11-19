@@ -5,7 +5,7 @@ import { ArrowRightIcon } from '../components/icons';
 import usePageMeta from '../components/usePageMeta';
 
 export default function PrivacyPage() {
-  usePageMeta('Privacy Policy', 'How Advior Automation handles client data, credentials, and AI processing.');
+  usePageMeta();
   return (
     <main>
       <div className="subnav" data-section="privacy-nav">

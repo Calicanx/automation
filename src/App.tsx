@@ -19,8 +19,11 @@ import BlogPostPage from './pages/BlogPostPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 import ContactPage from './pages/ContactPage';
+import NotFoundPage from './pages/NotFoundPage';
+import usePageMeta from './components/usePageMeta';
 
 function Landing() {
+  usePageMeta();
   return (
     <main>
       <Hero />
@@ -52,7 +55,7 @@ export default function App() {
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="*" element={<Landing />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
   );
