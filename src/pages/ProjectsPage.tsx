@@ -9,10 +9,7 @@ import { projects } from '../data/projects';
 import usePageMeta from '../components/usePageMeta';
 
 export default function ProjectsPage() {
-  usePageMeta(
-    'Selected Projects',
-    'Automation case studies from Advior — lead routing, document processing, and AI support workflows, each live in weeks.',
-  );
+  usePageMeta();
   return (
     <main>
       <div className="subnav" data-section="projects-nav">

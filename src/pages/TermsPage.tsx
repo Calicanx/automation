@@ -5,7 +5,7 @@ import { ArrowRightIcon } from '../components/icons';
 import usePageMeta from '../components/usePageMeta';
 
 export default function TermsPage() {
-  usePageMeta('Terms of Service', 'Simple terms for Advior Automation builds: fixed scope, test before you pay, and you own the workflow.');
+  usePageMeta();
   return (
     <main>
       <div className="subnav" data-section="terms-nav">

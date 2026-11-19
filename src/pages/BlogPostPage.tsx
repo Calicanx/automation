@@ -13,7 +13,7 @@ export default function BlogPostPage() {
   const sprint = formatPrice('sprint');
   const post = posts.find((p) => p.slug === slug);
   const [progress, setProgress] = useState(0);
-  usePageMeta(post ? post.title : 'Article not found', post?.excerpt);
+  usePageMeta();
 
   useEffect(() => {
     const onScroll = () => {

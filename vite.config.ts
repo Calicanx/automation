@@ -1,12 +1,26 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig, loadEnv} from 'vite';
+import {defineConfig, loadEnv, type Plugin} from 'vite';
+import {buildSitemapXml} from './src/seo';
+
+// Serve /sitemap.xml in dev the same way the production build generates it.
+function devSitemap(): Plugin {
+  return {
+    name: 'dev-sitemap',
+    configureServer(server) {
+      server.middlewares.use('/sitemap.xml', (_req, res) => {
+        res.setHeader('Content-Type', 'application/xml; charset=utf-8');
+        res.end(buildSitemapXml());
+      });
+    },
+  };
+}
 
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
-    plugins: [react(), tailwindcss()],
+    plugins: [react(), tailwindcss(), devSitemap()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
     },

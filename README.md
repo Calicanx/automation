@@ -44,7 +44,23 @@ Case studies live in `src/data/projects.ts`; blog posts in `src/data/posts.ts`.
 
 ## SEO
 
-The canonical origin is `https://automation.advior.top`. When adding pages, update
-`index.html`, `public/sitemap.xml`, and the page title via `usePageMeta`.
+The canonical origin is `https://automation.advior.top`. Pages are prerendered to
+static HTML at build time: every route ships real markup, a unique title,
+description, canonical, Open Graph/Twitter tags, and JSON-LD (blog posts get an
+`Article` schema). Bots and AI agents never need to run JavaScript.
+
+- Routes and per-page meta live in `src/seo.ts` (SEO_MANIFEST). Add new pages
+  there and in `src/App.tsx` — `npm run build` prerenders them and regenerates
+  `dist/sitemap.xml` from the manifest, so the sitemap cannot drift.
+- `scripts/prerender.mjs` injects per-route `<head>` into the client build and
+  emits `404.html` (served for unknown paths on Cloudflare Pages).
+- `usePageMeta()` applies the same manifest client-side on navigation.
+- `public/llms.txt` summarises the site for AI agents; `public/robots.txt`
+  allows AI crawlers explicitly; `404` routes render a noindex page.
+- `index.html`, `usePageMeta`, and the prerender script all point at
+  `public/og.png` for social cards.
+
+When adding pages, update `src/seo.ts`, `index.html` only if the default head
+changes, and the page title via `usePageMeta`.
 Cross-link to the website sibling at `https://website.advior.top`; never use the
 bare `advior.top` origin for canonical URLs.
