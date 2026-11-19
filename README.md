@@ -52,8 +52,9 @@ description, canonical, Open Graph/Twitter tags, and JSON-LD (blog posts get an
 - Routes and per-page meta live in `src/seo.ts` (SEO_MANIFEST). Add new pages
   there and in `src/App.tsx` — `npm run build` prerenders them and regenerates
   `dist/sitemap.xml` from the manifest, so the sitemap cannot drift.
-- `scripts/prerender.mjs` injects per-route `<head>` into the client build and
-  emits `404.html` (served for unknown paths on Cloudflare Pages).
+- `scripts/prerender.mjs` injects per-route `<head>` into the client build, emits
+  flat `page.html` files so clean URLs serve without a 308 (Cloudflare Pages),
+  and writes `404.html` (served for unknown paths).
 - `usePageMeta()` applies the same manifest client-side on navigation.
 - `public/llms.txt` summarises the site for AI agents; `public/robots.txt`
   allows AI crawlers explicitly; `404` routes render a noindex page.

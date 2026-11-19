@@ -88,10 +88,13 @@ function renderPage(entry, outFile) {
 }
 
 for (const entry of SEO_MANIFEST) {
+  // Emit flat .html files (/work.html) instead of /work/index.html: Cloudflare
+  // Pages serves flat files at the clean, extensionless URL that matches the
+  // sitemap and canonical tags — no 308 redirect hop on every pageview.
   const outFile =
     entry.path === '/'
       ? join(distDir, 'index.html')
-      : join(distDir, entry.path.slice(1), 'index.html');
+      : join(distDir, `${entry.path.slice(1)}.html`);
   renderPage(entry, outFile);
 }
 
