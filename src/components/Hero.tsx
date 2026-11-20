@@ -18,6 +18,22 @@ export default function Hero() {
   const sprint = formatPrice('sprint');
   return (
     <section className="hero" data-section="hero">
+      {/* Left columns: start at top of page (above navbar), cascade down to halfway */}
+      <div className="hero__columns hero__columns--left" aria-hidden="true">
+        <span className="hero__col hero__col--1" />
+        <span className="hero__col hero__col--2" />
+        <span className="hero__col hero__col--3" />
+        <span className="hero__col hero__col--4" />
+      </div>
+
+      {/* Right columns: start at bottom of hero, cascade up to halfway */}
+      <div className="hero__columns hero__columns--right" aria-hidden="true">
+        <span className="hero__col hero__col--4" />
+        <span className="hero__col hero__col--3" />
+        <span className="hero__col hero__col--2" />
+        <span className="hero__col hero__col--1" />
+      </div>
+
       <div className="hero__nav">
         <nav className="hero__nav-inner" aria-label="Main">
           <a href="#" className="hero__brand" onClick={(e) => e.preventDefault()}>
