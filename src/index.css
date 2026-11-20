@@ -573,6 +573,24 @@ button {
 .about-card--photo h3 { color: #fff; }
 .about-card--photo p { color: rgba(255, 255, 255, 0.78); }
 
+.about-card--arc .card-bg {
+  object-position: 20% 50%;
+  filter: blur(2px);
+  transform: scale(1.03);
+}
+
+.about-card--arc .card-shade {
+  background: linear-gradient(180deg, rgba(4, 8, 24, 0.2) 0%, rgba(4, 8, 24, 0.28) 40%, rgba(3, 5, 15, 0.86) 100%);
+}
+
+.about-card--spiral .card-bg {
+  object-position: 100% 50%;
+}
+
+.about-card--spiral .card-shade {
+  background: linear-gradient(180deg, rgba(4, 8, 24, 0.16) 0%, rgba(4, 8, 24, 0.28) 45%, rgba(3, 5, 15, 0.88) 100%);
+}
+
 .about-card--light {
   background: #f3f4f6;
   justify-content: flex-start;
