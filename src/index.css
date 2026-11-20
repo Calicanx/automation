@@ -115,20 +115,88 @@ button {
 .hero {
   position: relative;
   overflow: hidden;
-  background-color: #f5f8ff;
+  background-color: #ffffff;
   background-image:
-    radial-gradient(ellipse 55% 45% at 88% -8%, rgba(47, 107, 255, 0.35), transparent 65%),
-    radial-gradient(ellipse 45% 40% at 8% 108%, rgba(47, 107, 255, 0.12), transparent 65%),
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0) 0 90px, rgba(47, 107, 255, 0.06) 90px 150px, rgba(255, 255, 255, 0) 150px 260px);
+    radial-gradient(ellipse 50% 45% at 0% 0%, rgba(47, 107, 255, 0.14), transparent 65%),
+    radial-gradient(ellipse 50% 45% at 100% 100%, rgba(47, 107, 255, 0.14), transparent 65%);
+}
+
+.hero__columns {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero__columns--left {
+  left: 0;
+  top: 0;
+  align-items: flex-start;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 65%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 65%, transparent 100%);
+}
+
+.hero__columns--right {
+  right: 0;
+  bottom: 0;
+  align-items: flex-end;
+  -webkit-mask-image: linear-gradient(0deg, #000 0%, #000 65%, transparent 100%);
+  mask-image: linear-gradient(0deg, #000 0%, #000 65%, transparent 100%);
+}
+
+.hero__col {
+  display: block;
+  width: clamp(54px, 5.5vw, 84px);
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 0;
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.55), inset -1px 0 0 rgba(0, 50, 160, 0.1), 2px 0 8px rgba(0, 50, 150, 0.04);
+}
+
+/* Left columns: start at top of page (above navbar), cascade down to halfway */
+.hero__columns--left .hero__col--1 {
+  height: clamp(300px, 56vh, 480px);
+  background: linear-gradient(180deg, #0050e6 0%, #0066ff 12%, #1b7cf8 28%, #499bfd 48%, #85beff 68%, #bfdcfe 85%, rgba(255, 255, 255, 0) 100%);
+}
+.hero__columns--left .hero__col--2 {
+  height: clamp(260px, 48vh, 410px);
+  background: linear-gradient(180deg, #0c6bf7 0%, #1f7ff9 12%, #3890fb 28%, #62a8fd 48%, #97c8ff 68%, #cbe3fe 85%, rgba(255, 255, 255, 0) 100%);
+}
+.hero__columns--left .hero__col--3 {
+  height: clamp(220px, 41vh, 350px);
+  background: linear-gradient(180deg, #2380fb 0%, #3891fc 12%, #58a2fc 28%, #7eb8fd 48%, #abcffe 68%, #d7e8fe 85%, rgba(255, 255, 255, 0) 100%);
+}
+.hero__columns--left .hero__col--4 {
+  height: clamp(180px, 34vh, 290px);
+  background: linear-gradient(180deg, #4b9dfd 0%, #5ea9fc 12%, #7cb9fd 28%, #9ec9fd 48%, #c1defd 68%, #e4effe 85%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Right columns: start at bottom of hero, cascade up to halfway */
+.hero__columns--right .hero__col--4 {
+  height: clamp(180px, 34vh, 290px);
+  background: linear-gradient(0deg, #4b9dfd 0%, #5ea9fc 12%, #7cb9fd 28%, #9ec9fd 48%, #c1defd 68%, #e4effe 85%, rgba(255, 255, 255, 0) 100%);
+}
+.hero__columns--right .hero__col--3 {
+  height: clamp(220px, 41vh, 350px);
+  background: linear-gradient(0deg, #2380fb 0%, #3891fc 12%, #58a2fc 28%, #7eb8fd 48%, #abcffe 68%, #d7e8fe 85%, rgba(255, 255, 255, 0) 100%);
+}
+.hero__columns--right .hero__col--2 {
+  height: clamp(260px, 48vh, 410px);
+  background: linear-gradient(0deg, #0c6bf7 0%, #1f7ff9 12%, #3890fb 28%, #62a8fd 48%, #97c8ff 68%, #cbe3fe 85%, rgba(255, 255, 255, 0) 100%);
+}
+.hero__columns--right .hero__col--1 {
+  height: clamp(300px, 56vh, 480px);
+  background: linear-gradient(0deg, #0050e6 0%, #0066ff 12%, #1b7cf8 28%, #499bfd 48%, #85beff 68%, #bfdcfe 85%, rgba(255, 255, 255, 0) 100%);
 }
 
 .hero__nav {
   position: sticky;
-  top: 1rem;
+  top: 0;
   z-index: 50;
   max-width: 72rem;
-  margin: 1rem auto 0;
-  padding: 0 1.5rem;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
 }
 
 .hero__nav-inner {
@@ -203,6 +271,7 @@ button {
 
 .hero__content {
   position: relative;
+  z-index: 1;
   text-align: center;
   padding: 5.5rem 1.5rem 8.5rem;
 }
