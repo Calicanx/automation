@@ -29,10 +29,10 @@ export default function About() {
         </div>
 
         <div className="about__cards">
-          <div className="about-card about-card--dark about-card--photo">
+          <div className="about-card about-card--dark about-card--photo about-card--arc">
             <img
               className="card-bg"
-              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
+              src="/Electric Blue Horizon Arc.png"
               alt=""
               loading="lazy"
             />
@@ -43,10 +43,10 @@ export default function About() {
               meters, no open-ended discovery, no invoice you did not agree to.
             </p>
           </div>
-          <div className="about-card about-card--art about-card--photo">
+          <div className="about-card about-card--art about-card--photo about-card--spiral">
             <img
               className="card-bg"
-              src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+              src="/a_high_resolution_abstract_digital_wallpaper_3d_re.png"
               alt=""
               loading="lazy"
             />
